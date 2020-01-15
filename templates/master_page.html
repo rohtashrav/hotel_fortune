@@ -1,0 +1,190 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+{% block title %}
+{% endblock  %}
+</title>
+<link href='/assets/front_panel_css/google_api_1.css' rel='stylesheet' type='text/css'>
+<link href='/assets/front_panel_css/google_api_2.css' rel='stylesheet' type='text/css'>
+<link href='/assets/front_panel_css/google_api_3.css' rel='stylesheet' type='text/css'>
+<link href="/assets/front_panel_css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href="/assets/front_panel_css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/front_panel_js/jquery.min.js"></script>
+</head>
+<body>
+<!--header starts-->
+<div class="header">
+	 <div class="top-header">
+		 <div class="container">
+			 <div class="logo">
+				 	<a href="index.html"><img src="/assets/front_panel_images/logo.png"/></a>
+			 </div>
+			 <span class="menu"> </span>
+			 <div class="m-clear"></div>
+			 <div class="top-menu">
+				<ul>
+					 <li class="active"><a href="index.html">START</a></li>
+					 <li><a class="scroll" href="facilities.html">FACILITIES</a></li>
+					 <li><a class="scroll" href="restaurant.html">RESTAURANT</a></li>
+					 <li><a class="scroll" href="conference.html">CONFERENCE</a></li>
+					 <li><a class="scroll" href="booking.html">BOOKING</a></li>
+					 <li><a class="scroll" href="contact.html">CONTACT US</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-menu ul").slideToggle(200);
+					});
+				</script>
+			 </div>
+			 <div class="clearfix"></div>
+		  </div>
+	  </div>
+	  <div class="banner">
+			<div class="banner-info text-center">
+			<h3><label>Hello,</label> You've Reached</h3>
+			<h1>HOTEL FORTUNE</h1>
+			<span></span>
+			<ul>
+			 <li><a class="scroll" href="#">HOTEL</a><i class="line"></i></li>
+			 <li><a class="scroll" href="#">SPA SALOON</a><i class="line2"></i></li>
+			 <li><a class="scroll" href="#">FINE DINING</a></li>
+			 <div class="clearfix"></div>
+			</ul>
+			</div>
+	  </div>
+</div>
+<!---strat-date-piker---->
+<link rel="stylesheet" href="/assets/front_panel_css/jquery-ui.css" />
+<script src="/assets/front_panel_js/jquery-ui.js"></script>
+		  <script>
+				  $(function() {
+				    $( "#datepicker,#datepicker1" ).datepicker();
+				  });
+		  </script>
+<!---/End-date-piker---->
+<link type="text/css" rel="stylesheet" href="/assets/front_panel_css/JFGrid.css" />
+<link type="text/css" rel="stylesheet" href="/assets/front_panel_css/JFFormStyle-1.css" />
+<script type="text/javascript" src="/assets/front_panel_js/JFCore.js"></script>
+<script type="text/javascript" src="/assets/front_panel_js/JFForms.js"></script>
+<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+<script type="text/javascript">
+	(function() {
+		JC.init({
+			domainKey: ''
+		});
+	})();
+</script>
+<div class="online_reservation">
+		   <div class="b_room">
+			  <div class="booking_room">
+				  <div class="reservation">
+					  <ul>				
+						 <li  class="span1_of_1 left">
+							 <h5>Arrival</h5>
+							 <div class="book_date">
+								 <form>
+								 <input class="date" id="datepicker" type="text" value="2/08/2013" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}">
+								 </form>
+							 </div>					
+						 </li>
+						 <li  class="span1_of_1 left">
+							 <h5>Depature</h5>
+							 <div class="book_date">
+							 <form>
+								<input class="date" id="datepicker1" type="text" value="22/08/2013" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '22/08/2013';}">
+							 </form>
+						     </div>		
+						 </li>
+						 <li class="span1_of_1">
+							 <h5>Room type</h5>
+							 <!----------start section_room----------->
+							 <div class="section_room">
+							      <select id="country" onchange="change_country(this.value)" class="frm-field required">
+										<option value="null">Standard Single Room</option>
+										<option value="null">Suite room</option>         
+										<option value="AX">Single room</option>
+										<option value="AX">Double room</option>
+							      </select>
+							 </div>	
+						 </li>
+						 <li class="span1_of_3">
+								<div class="date_btn">
+									<form>
+										<input type="submit" value="View Prices" />
+									</form>
+								</div>
+						 </li>
+						 <div class="clearfix"></div>
+					 </ul>
+				 </div>
+			  </div>
+				<div class="clearfix"></div>
+		  </div>
+	  </div>
+</div>
+<!---->
+{% block content %}
+{% endblock  %}
+<!---->
+<div class="fotter">
+	 <div class="container">
+		 <h3>143 City Located Hotels World Wide</h3>
+		 <h4>"Hospitality, Quality & Good Locations. We only provide you with the best hotels" - John Deo</h4>
+		 <i class="man"></i>
+	 </div>
+</div>
+<!---->
+<div class="fotter-info">
+	  <div class="container">
+	      <div class="col-md-5 details">
+			 <div class="hotel-info">
+				 <h4>ABOUT THIS HOTEL</h4>
+				 <p>Suspendisse erat mi, tincidunt sit amet massa quis, commodo fermentum diam. Sed nec dui nec nunc tempor interdum.</p>
+				 <p>Ut vulputate augue urna, ut porta dolor imperdiet a. Vestibulum nec leo eu magna aliquam ornare.</p>
+			 </div>
+			 <div class="news">
+				 <h4>LATEST NEWS</h4>
+				 <h5>Grand Hotel Joins DeluxelHotels</h5>
+				 <a href="#">15 AUG</a>
+				 <h5>Happy Chirstmas To Everyone</h5>
+				 <a href="#">15 AUG</a>
+				 <h5>Best Places To Visit 2014</h5>
+				 <a href="#">15 AUG</a>
+				 <h5>Various Offers</h5>
+				 <a href="#">15 AUG</a>		
+			 </div>
+				<div class="clearfix"></div>
+		 </div>
+		 <div class="col-md-7 details">
+			 <div class="join">
+				 <h4>JOIN DELUXEHOTELS</h4>
+				 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus vestibulum blandit egestas. 
+				 Nam id lectus vel orci luctus consectetur eget id elit. In tortor odio, pellentesque eu arcu sit amet, lacinia euismod nisi. Aliquam sodales tristique mauris ac fermentum.
+				 Donec vel varius ipsum. Pellentesque vitae mollis massa. </p>
+				 <p>There is no costs or whatsoever so sign up today!</p>
+				 <a href="#">READ MORE</a>
+			 </div>
+			 <div class="member">
+			 <h4>MEMBERS AREA</h4>
+			 <form method="post">
+			 {% csrf_token %}
+			 <p>Username</p>
+			 <input type="text" name="email" placeholder="" required/>
+			 <p>Password</p>
+			 <input type="password" name="password" placeholder="" required/>		
+			 <input type="submit" value="LOGIN"/>
+			 </form>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+		 <div class="clearfix"></div>
+	  </div>
+	 <h6>Template by <a href="http://w3layouts.com/">W3layouts</h6>	  
+</div>
+<!---->
+
+</body>
+</html>
