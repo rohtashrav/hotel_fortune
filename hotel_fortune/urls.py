@@ -21,4 +21,5 @@ from front_panel_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('^$', views.index),
+    url(r'registration/$',views.registration),
 ]
