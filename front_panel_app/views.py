@@ -21,10 +21,10 @@ def registration(request):
             link = "127.0.0.1:8000/verify/?token={}".format(token)
             form.verify_link = token
             form.save()
-            # try:
-            #     verify_link_mail(request.POST['name'], request.POST['email'], link)
-            # except:
-            #     return HttpResponse("<h1>Mail not send</h1>")
+             try:
+                 verify_link_mail(request.POST['name'], request.POST['email'], link)
+             except:
+                return HttpResponse("<h1>Mail not send</h1>")
             return HttpResponse("<h1>Data Save Successfully")
         else:
             return HttpResponse("<h1>Form not valid")
