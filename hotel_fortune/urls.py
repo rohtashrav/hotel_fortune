@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from front_panel_app import views
+from backend_panel_app import views as backend
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('^$', views.index),
+    url(r'login/$', backend.login),
     url(r'registration/$',views.registration),
 ]
