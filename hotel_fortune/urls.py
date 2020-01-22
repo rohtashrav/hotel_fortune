@@ -24,4 +24,5 @@ urlpatterns = [
     url('^$', views.index),
     url(r'login/$', backend.login),
     url(r'registration/$',views.registration),
+    url(r'backend_index/$',views.backend_index),
 ]
