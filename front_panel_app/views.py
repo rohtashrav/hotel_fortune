@@ -29,3 +29,5 @@ def registration(request):
         else:
             return HttpResponse("<h1>Form not valid")
     return render(request, "registration.html", {'role_data': role_data})
+def backend_index(request):
+    return render(request, "backend_index.html")
