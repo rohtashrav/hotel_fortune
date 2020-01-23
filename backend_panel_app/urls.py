@@ -5,4 +5,5 @@ app_name = "bacend_panel_app"
 
 urlpatterns = [
     url(r'^admin_register/$', views.admin_register),
+    url(r'^admin_index/$', views.admin_index),
 ]

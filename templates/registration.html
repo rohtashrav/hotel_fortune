@@ -16,7 +16,7 @@
     <link href="/assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="/assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
-    <link href="/assets/front_panel_css/google_api_regist.css/css" rel="stylesheet">
+    <link href="/assets/front_panel_css/google_api_regist.css" rel="stylesheet">
 
     <!-- /assets/vendor CSS-->
     <link href="/assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
@@ -33,39 +33,33 @@
                 <div class="card-body">
                     <h2 class="title">Registration Form</h2>
                     <form method="POST">
-                     {% csrf_token %}
+                        {% csrf_token %}
+                        <div class="row row-space">
+                            <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">First name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <label class="label">name</label>
+                                    <input class="input--style-4" type="text" name="name">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Last name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <label class="label">Phone Number</label>
+                                    <input class="input--style-4" type="text" name="phone">
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Address</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Gender</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" name="gender" value="male">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">Female
-                                            <input type="radio" name="gender">
+                                            <input type="radio" value="female" name="gender">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -81,32 +75,27 @@
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Mobile</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <label class="label">Password</label>
+                                    <input class="input--style-4" type="password" name="password">
                                 </div>
                             </div>
                         </div>
                         <div class="input-group">
-                            <label class="label">Subject</label>
+                            <label class="label">Address</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Subject 1</option>
-                                    <option>Subject 2</option>
-                                    <option>Subject 3</option>
-                                </select>
-                                <div class="select-dropdown"></div>
+                                <div>
+                                    <input type="text" name="address" class="input--style-4">
+                                </div>
                             </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                            <input class="btn btn--radius-2 btn--blue" type="submit" value="Submit">
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Jquery JS-->
     <script src="/assets/vendor/jquery/jquery.min.js"></script>
     <!-- /assets/vendor JS-->
@@ -115,7 +104,7 @@
     <script src="/assets/vendor/datepicker/daterangepicker.js"></script>
 
     <!-- Main JS-->
-    <script src="/assets/front_panel_css/global.js"></script>
+    <script src="/assets/front_panel_js/global.js"></script>
 
 </body><!-- This templates was made by Colorlib -->
 

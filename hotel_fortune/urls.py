@@ -23,7 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('backend_panel_app.urls')),
     url('^$', views.index),
-    url(r'login/$', backend.login),
-    url(r'registration/$',views.registration),
-    url(r'backend_index/$',views.backend_index),
+    url(r'^verify/$', backend.verify_mail),
 ]
