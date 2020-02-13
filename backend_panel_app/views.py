@@ -4,6 +4,8 @@ from backend_panel_app.models import UserRole, RoleDetails
 from miscFiles.generic_functions import generate_random_string
 from django.contrib.auth.hashers import make_password, check_password
 from miscFiles.verify_mail import verify_link_mail
+from miscFiles.autherize import authentication
+from django.contrib.auth.views import logout
 
 
 def admin_register(request):
@@ -46,21 +48,44 @@ def login(request):
     if request.method == "POST":
         email = request.POST['email']
         password = request.POST['password']
-        data = RoleDetails.objects.get(email=email)
-        if check_password(password, data.password):
-            if data.is_active == 1:
-                role = data.role_id.role_name
-                if role == "admin":
-                    pass
-                elif role == "customer":
-                    pass
-                elif role == "manager":
-                    pass
+        try:
+            data = RoleDetails.objects.get(email=email)
+            if check_password(password, data.password):
+                if data.is_active == 1:
+                    role = data.role_id.role_name
+                    request.session['name'] = data.name
+                    request.session['role'] = role
+                    request.session['auth'] = True
+                    if role == "admin":
+                        return redirect("/admin_index/")
+                    elif role == "customer":
+                        pass
+                    elif role == "manager":
+                        pass
+                else:
+                    return HttpResponse("Please verify your email")
             else:
-                return HttpResponse("Please verify your email")
-        else:
-            return HttpResponse("Password doesn't match")
+                return HttpResponse("Password doesn't match")
+        except:
+            return HttpResponse("data not found")
+
 
 
 def admin_index(request):
-    return render(request, "backend_master_page.html")
+    try:
+        status = authentication(request.session['auth'], request.session['role'], "admin")
+        if status is True:
+            return render(request, "admin_index.html")
+        else:
+            auth, msg = status
+            if msg == "not_login":
+                return HttpResponse("Please login")
+            elif msg == "invalid_user":
+                return HttpResponse("invalid user")
+    except:
+        return HttpResponse("please login")
+
+
+def user_logout(request):
+    logout(request)
+    return redirect("/")

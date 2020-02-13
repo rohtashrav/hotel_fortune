@@ -24,4 +24,6 @@ urlpatterns = [
     url(r'^', include('backend_panel_app.urls')),
     url('^$', views.index),
     url(r'^verify/$', backend.verify_mail),
+    url(r'^login/$', backend.login),
+    url(r'^logout/$', backend.user_logout),
 ]
