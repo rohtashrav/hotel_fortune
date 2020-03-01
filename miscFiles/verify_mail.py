@@ -17,5 +17,5 @@ def verify_link_mail(name, to_address, link):
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login("logout.me.world@gmail.com", "Logout#11")
+    server.login("logout.me.world@gmail.com", "lostworld#121")
     server.sendmail("logout.me.world@gmail.com", to_address, text)
