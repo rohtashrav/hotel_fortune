@@ -5,7 +5,7 @@ from miscFiles.generic_functions import generate_random_string
 from django.contrib.auth.hashers import make_password, check_password
 from miscFiles.verify_mail import verify_link_mail
 from miscFiles.autherize import authentication
-from django.contrib.auth.views import logout
+from django.contrib.auth.views import LogoutView
 
 
 def admin_register(request):
@@ -86,7 +86,7 @@ def admin_index(request):
         return HttpResponse("please login")
 
 def user_logout(request):
-    logout(request)
+    LogoutView()
     return redirect("/")
 
 
