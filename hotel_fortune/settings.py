@@ -11,12 +11,14 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-pymysql.version_info = (1,3,13,'final',0)
+import pymysql
+# pymysql.version_info = (1, 3,  13, 'final', 0)
 pymysql.install_as_MySQLdb()
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -83,7 +85,7 @@ DATABASES = {
         'NAME': 'hotel_db',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'USER': 'root',
+        'USER': 'fortune_server',
         'PASSWORD': 'login@11',
     }
 }

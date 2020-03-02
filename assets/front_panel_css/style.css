@@ -244,7 +244,7 @@ select option{
 	-o-border-radius: 9px;
 }
 .date{
-	background:url(../images/icon.png) no-repeat 3% 50% #FFF;
+	background:url(/assets/front_panel_images/icon.png) no-repeat 3% 50% #FFF;
 }
 .date_btn{
 	margin:22px 0 0 0px;
@@ -481,7 +481,7 @@ p.para{
 }
 .s_nav1 li a{
 	display: block;
-	background: url('../images/s_icons.png') no-repeat 0px 0px;
+	background: url('/assets/front_panel_images/s_icons.png') no-repeat 0px 0px;
 	width: 32px;
 	height: 32px;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -656,7 +656,7 @@ list-style-type: none;
 .items li a span{
 width:25px;
 height:25px;
-background:url('../images/splits.png') no-repeat 0px 0px;
+background:url('/assets/front_panel_images/splits.png') no-repeat 0px 0px;
 display:block;
 }
 .items li a span.img1{
@@ -705,7 +705,7 @@ font-style:italic;
 margin:1.2em 0 0 2.7em;
 }
 .man{
-background:url(../images/man.png) no-repeat 0px 0px;
+background:url(/assets/front_panel_images/man.png) no-repeat 0px 0px;
 width:278px;
 height:277px;
 display:block;
@@ -903,7 +903,7 @@ color:#FFD700;
 }
 /*--FACILITIES-PAGE--*/
 .main_bg{
-background:url(../images/rooms.jpg) repeat-y 0px 0px;
+background:url(/assets/front_panel_images/rooms.jpg) repeat-y 0px 0px;
 background-size:cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -977,7 +977,7 @@ span.next{
 	-o-transition-duration: 1s;
 	-moz-transition-duration: 1s;
 	-webkit-transition: -webkit-transform 1s;
-	background: url(../images/next.png) center no-repeat;
+	background: url(/assets/front_panel_images/next.png) center no-repeat;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -1057,7 +1057,7 @@ cursor:pointer;
   border: 0;
 }
 .hotel-details{
-background:url(../images/rooms.jpg) repeat-y 0px 0px;
+background:url(/assets/front_panel_images/rooms.jpg) repeat-y 0px 0px;
 background-size:cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -1080,7 +1080,7 @@ font-weight:bold;
 color: #00CCFF;
 }
 .hotel-welcome{
-background:url(../images/rooms.jpg) repeat-y 0px 0px;
+background:url(/assets/front_panel_images/rooms.jpg) repeat-y 0px 0px;
 background-size:cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -1150,11 +1150,11 @@ line-height: 1.8em;
 }
 .content-grids{
 	padding: 2em 0;
-	background: url(../images/box.png);
+	background: url(/assets/front_panel_images/box.png);
 	margin-top: 2em;
 }
 .start:before{
-	content: url(../images/quote-1.png);
+	content: url(/assets/front_panel_images/quote-1.png);
 	vertical-align: super;
 	padding-right:5px;
 }
@@ -1175,7 +1175,7 @@ line-height: 1.8em;
 	margin: 0.5em auto;
 }
 .info{
-background: url(../images/rooms.jpg) repeat-y 0px 0px;
+background: url(assets/front_panel_images/rooms.jpg) repeat-y 0px 0px;
 background-size: cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -1192,7 +1192,7 @@ text-align: center;
 }
 /*--CONFERENCE-PAGE--*/
 .confer{
-background:url(../images/rooms.jpg) repeat-y 0px 0px;
+background:url(assets/front_panel_images/rooms.jpg) repeat-y 0px 0px;
 background-size:cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -1388,7 +1388,7 @@ font-size:22px;
 }
 /*--Booking--*/
 .contact-bg2 {
-background: url(../images/rooms.jpg) repeat-y 0px 0px;
+background: url(assets/front_panel_images/rooms.jpg) repeat-y 0px 0px;
 background-size: cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -1504,7 +1504,7 @@ font-size:0.75em;
 }
 /*--CONTACT-page--*/
 .contact-bg{
-background:url(../images/rooms.jpg) repeat-y 0px 0px;
+background:url(assets/front_panel_images/rooms.jpg) repeat-y 0px 0px;
 background-size:cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -2114,7 +2114,7 @@ padding-bottom: 0px;
 width: 38%;
 }
 span.menu:before {
-	content: url(../images/nav.png);
+	content: url(/assets/front_panel_images/nav.png);
 	cursor: pointer;		
 }
 .top-menu {
