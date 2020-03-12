@@ -19,3 +19,5 @@ def verify_link_mail(name, to_address, link):
     server.starttls()
     server.login("logout.me.world@gmail.com", "lostworld#121")
     server.sendmail("logout.me.world@gmail.com", to_address, text)
+
+

@@ -116,3 +116,22 @@ def manager_register(request):
         else:
             return HttpResponse("<h1>Form not valid")
     return render(request, "registration.html")
+
+def facilities(request):
+    return render(request,"facilities.html")    
+
+def booking(request):
+    return render(request,"booking.html")    
+
+def contact(request):
+    return render(request,"contact.html")    
+
+def details(request):
+    return render(request,"details.html")    
+
+def conference(request):
+    return render(request,"conference.html")    
+
+def restaurant(request):
+    return render(request,"restaurant.html")
+
